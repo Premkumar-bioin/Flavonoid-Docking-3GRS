@@ -1,0 +1,6 @@
+Ligand,Score,MW_x,MW_y,LogP,HBD,HBA,Violations,Drug-like
+Luteolin,-8.668,286.239,286.24,2.28,4,6,0,Yes
+Quercetin,-8.651,302.238,302.24,1.99,5,7,0,Yes
+Kaempferol,-8.458,286.23900000000003,286.24,2.28,4,6,0,Yes
+Naringenin,-8.016,272.256,272.26,2.51,3,5,0,Yes
+Naringin,-7.666,580.5390000000002,580.54,-1.17,8,14,3,No
