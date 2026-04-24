@@ -1,7 +1,7 @@
 # Computational Investigation of Flavonoids Targeting Glutathione Reductase in Intestinal Inflammation
 
 ## 📌 Project Overview
-This project investigates the antioxidant and anti-inflammatory potential of a flavonoid library (**Naringin**,**Naringenin**,**Quercetin**,**Kaempfero** and **Luteolin**, against Human Glutathione Reductase (3GRS). This computational workflow(**only used python coing**) was designed to support an *in vivo* Zebrafish Inflammatory Bowel Disease (IBD) model.
+This project investigates the antioxidant and anti-inflammatory potential of a flavonoid library (**Naringin**,**Naringenin**,**Quercetin**,**Kaempferol** and **Luteolin**, against Human Glutathione Reductase (3GRS). This computational workflow(**only by coding**) was designed to support an *in vivo* Zebrafish Inflammatory Bowel Disease (IBD) model.
 
 ## 🔬 Scientific Rationale
 Naringin is a major flavonoid glycoside studied in my prior zebrafish IBD models. This project utilizes molecular docking to determine whether Naringin directly inhibits 3GRS or if it likely acts as a prodrug (requiring metabolism into an aglycone) compared to planar flavonoids like Luteolin.
