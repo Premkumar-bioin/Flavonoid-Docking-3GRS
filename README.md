@@ -1,10 +1,10 @@
 # Computational Investigation of Flavonoids Targeting Glutathione Reductase in Intestinal Inflammation
 
 ## 📌 Project Overview
-This project investigates the antioxidant and anti-inflammatory potential of a flavonoid library, specifically comparing **Naringin** and **Luteolin**, against Human Glutathione Reductase (3GRS). This computational workflow was designed to support an *in vivo* Zebrafish Inflammatory Bowel Disease (IBD) model.
+This project investigates the antioxidant and anti-inflammatory potential of a flavonoid library (**Naringin**,**Naringenin**,**Quercetin**,**Kaempfero** and **Luteolin**, against Human Glutathione Reductase (3GRS). This computational workflow(**only used python coing**) was designed to support an *in vivo* Zebrafish Inflammatory Bowel Disease (IBD) model.
 
 ## 🔬 Scientific Rationale
-Naringin is a major flavonoid glycoside studied in zebrafish IBD models. This project utilizes molecular docking to determine whether Naringin directly inhibits 3GRS or if it likely acts as a prodrug (requiring metabolism into an aglycone) compared to planar flavonoids like Luteolin.
+Naringin is a major flavonoid glycoside studied in my prior zebrafish IBD models. This project utilizes molecular docking to determine whether Naringin directly inhibits 3GRS or if it likely acts as a prodrug (requiring metabolism into an aglycone) compared to planar flavonoids like Luteolin.
 
 ## 🛠️ Tools & Technologies Used
 * **Data Preparation:** Python, RDKit, Pandas
@@ -16,6 +16,10 @@ Naringin is a major flavonoid glycoside studied in zebrafish IBD models. This pr
 1. **Luteolin emerged as the lead compound.** It successfully penetrated the deep catalytic pocket of 3GRS, forming a critical **1.91 Å hydrogen bond** with Thr40 near the redox-active Cys58/Cys63 disulfide center.
 2. **Naringin exhibited steric hindrance.** Due to its bulky neohesperidoside sugar moiety, Naringin showed a weaker binding profile compared to Luteolin. 
 3. **Conclusion:** The data suggests that for high-affinity binding to Glutathione Reductase, the aglycone structure is preferred. In the zebrafish model, Naringin's efficacy is likely dependent on gut microbiota or enzymatic cleavage into Naringenin.
+<img width="1023" height="614" alt="Screenshot 2026-04-24 112600" src="https://github.com/user-attachments/assets/46f68c38-c9b5-4db6-8398-f5679c9e18b2" />
+<img width="1308" height="537" alt="Screenshot 2026-04-24 112535" src="https://github.com/user-attachments/assets/97052857-6371-497d-a461-953787e73d5a" />
+<img width="849" height="201" alt="Screenshot 2026-04-24 112441" src="https://github.com/user-attachments/assets/09dea86a-4452-41d9-bb58-4e1cbcfc3e13" />
+
 
 ## 🖼️ Visualization: Consensus Binding
 <img width="1919" height="752" alt="Screenshot 2026-04-24 100150" src="https://github.com/user-attachments/assets/84337257-5baa-49ad-9988-f49e1d447d54" />
