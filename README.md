@@ -1,3 +1,12 @@
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
+![RDKit](https://img.shields.io/badge/RDKit-Cheminformatics-green)
+![AutoDock Vina](https://img.shields.io/badge/AutoDock%20Vina-Docking-orange)
+![OpenBabel](https://img.shields.io/badge/OpenBabel-Converter-yellow)
+![Google Colab](https://img.shields.io/badge/Google%20Colab-Notebook-red?logo=googlecolab)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+
+
 # 🧬 Targeted Computational Docking of Flavonoids Against Glutathione Reductase (3GRS)
 
 ---
