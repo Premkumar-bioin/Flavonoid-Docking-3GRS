@@ -1,83 +1,116 @@
-# 🧬 Computational Investigation of Flavonoids Targeting Glutathione Reductase in Intestinal Inflammation
+# 🧬 Targeted Computational Docking of Flavonoids Against Glutathione Reductase (3GRS)
 
 ---
 
 ## 📌 Project Overview
 
-This project explores the binding potential of selected flavonoids (**Naringin**, **Naringenin**, **Quercetin**, **Kaempferol**, and **Luteolin**) against **Glutathione Reductase (PDB ID: 3GRS)** using a fully code-driven computational pipeline implemented in Google Colab.
+This project performs a **targeted molecular docking analysis** of selected flavonoids (**Naringin, Naringenin, Quercetin, Kaempferol, and Luteolin**) against **Human Glutathione Reductase (PDB ID: 3GRS)** using a fully automated **Google Colab-based pipeline**.
 
-The study aims to understand how structural variations among flavonoids influence their interaction with antioxidant enzymes involved in oxidative stress regulation, which is closely associated with Inflammatory Bowel Disease (IBD).
+The workflow is designed to investigate how structural features of flavonoids influence their binding within the **catalytic redox-active site**, which plays a critical role in oxidative stress regulation associated with **Inflammatory Bowel Disease (IBD)**.
 
 ---
 
 ## 🔬 Scientific Rationale
 
-Oxidative stress plays a significant role in the pathophysiology of IBD.  
-**Glutathione reductase (GR)** is a key enzyme responsible for maintaining intracellular redox balance by regenerating reduced glutathione (GSH).
+Glutathione reductase (GR) maintains cellular redox balance by regenerating reduced glutathione (GSH).  
+Disruption of this system contributes to oxidative stress observed in inflammatory conditions such as IBD.
 
-In prior *in vivo* zebrafish experiments, **Naringin** demonstrated protective effects against intestinal inflammation. This study investigates:
+This study aims to:
 
-- Whether Naringin directly interacts with GR  
-- Or functions as a **prodrug**, requiring metabolic conversion to its aglycone (**Naringenin**)  
-- How planar flavonoids (e.g., Luteolin, Quercetin) compare in binding efficiency  
-
----
-
-## ⚙️ Computational Workflow
-
-This project was executed entirely through code (no GUI tools), following a structured CADD pipeline:
-
-### 🔹 Phase 1 — Ligand Preparation
-- SMILES retrieval and processing using RDKit  
-- 3D conformer generation (ETKDG)  
-- Energy minimization (MMFF94)  
-- Output formats: `.sdf`, `.pdb`  
+- Evaluate binding affinity of flavonoids at the **catalytic cysteine site (Cys58, Cys63)**  
+- Compare **aglycones vs glycosylated flavonoids**  
+- Understand structure–activity relationships (SAR)  
+- Support prior **zebrafish IBD model findings**
 
 ---
 
-### 🔹 Phase 2 — Protein Preparation
-- Structure retrieved from RCSB PDB (3GRS)  
-- Removal of water molecules and unwanted heteroatoms  
-- Retention of FAD cofactor (catalytic relevance)  
-- Hydrogen addition and charge assignment using OpenBabel  
+## ⚙️ Computational Workflow (Code-Driven)
+
+### 🔹 1. Environment Setup
+
+- Installed tools:
+  - OpenBabel  
+  - AutoDock Vina  
+  - RDKit  
+  - Meeko  
+  - py3Dmol  
+  - Pandas  
 
 ---
 
-### 🔹 Phase 3 — Molecular Docking
-- Docking performed using AutoDock Vina  
-- Grid box centered around FAD-associated catalytic region  
-- Exhaustiveness: 16  
-- Top binding poses extracted and ranked  
+### 🔹 2. Protein Preparation
+
+- Structure: **3GRS (RCSB PDB)**
+- Steps:
+  - Removed water and heteroatoms  
+  - Retained only protein atoms  
+  - Protonation at **physiological pH (7.4)**  
+  - Gasteiger charge assignment  
+  - Converted to **PDBQT format**
 
 ---
 
-### 🔹 Phase 4 — Visualization & Interaction Analysis
-- Structural visualization using:
-  - PyMOL  
-  - UCSF ChimeraX  
-  - py3Dmol (in-notebook rendering)  
-- Interaction profiling:
-  - Hydrogen bonds  
-  - Residue-level contacts  
-  - Binding orientation analysis  
+### 🔹 3. Ligand Preparation
+
+- SMILES → 3D structures using RDKit  
+- Hydrogen addition  
+- Geometry optimization (MMFF)  
+- Conversion to docking format using Meeko  
 
 ---
 
-### 🔹 Phase 5 — ADMET Evaluation
-- Drug-likeness prediction via SwissADME  
-- Lipinski Rule of Five assessment  
-- Physicochemical property analysis  
+### 🔹 4. Targeted Docking Setup
+
+Docking was performed specifically at the **catalytic active site**:
+
+- **Target residues:** Cys58, Cys63  
+- Grid center:
+x = 65.022
+y = 46.284
+z = 15.613
+- Grid size:
+22 × 22 × 22 Å
+- Exhaustiveness: **32 (high precision search)**
 
 ---
 
-## 📊 Key Findings
+### 🔹 5. Molecular Docking
 
-### 🥇 1. Lead Compound Identification
-**Luteolin** demonstrated the strongest binding affinity (~ -8.66 kcal/mol), followed closely by Quercetin.
+- Tool: AutoDock Vina  
+- Batch docking of all ligands  
+- Best binding pose extracted from each run  
+- Binding energies parsed from log files
 
-- Favorable positioning within catalytic pocket  
-- Strong hydrogen bonding interactions near active-site residues  
-- Planar structure enhances π–π and H-bond interactions  
+---
+
+### 🔹 6. Visualization
+
+- Interactive 3D visualization using **py3Dmol**  
+- Ligand displayed within protein structure  
+- Docking grid box visualized  
+- Binding pose inspection enabled
+
+---
+
+## 📊 Results
+
+### 🧪 Docking Scores (kcal/mol)
+
+| Ligand | Binding Energy |
+|--------|--------------|
+| Luteolin | ~ -8.6 |
+| Quercetin | ~ -8.6 |
+| Kaempferol | ~ -8.4 |
+| Naringenin | ~ -8.0 |
+| Naringin | ~ -7.6 |
+
+---
+
+## 🔍 Key Observations
+
+### 🥇 1. Lead Compounds
+- **Luteolin and Quercetin showed strongest binding affinity**
+- Efficient accommodation within catalytic pocket
 
 ---
 
